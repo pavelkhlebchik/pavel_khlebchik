@@ -1,0 +1,29 @@
+@import './src/styles/mixins';
+
+.nav {
+  height: 100vh;
+  width: getRem(240);
+  background-color: tomato;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.item {
+  margin: 0;
+  padding: 0;
+  padding: getRem(8) getRem(16);
+}
+
+.link {
+  color: #ffffff;
+  font-size: getRem(24);
+  font-weight: 700;
+}

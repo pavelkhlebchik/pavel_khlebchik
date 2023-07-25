@@ -1,0 +1,50 @@
+@import './src/styles/variables';
+
+html {
+  font-size: calc-between-width(2, 0.05, 375, 10);
+
+  @media screen and (max-width: $mobile-width-only) {
+    font-size: calc-between-width(375, 10, 1024, 27.3);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: calc-between-width(1025, 6.4, 1600, 10);
+  }
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

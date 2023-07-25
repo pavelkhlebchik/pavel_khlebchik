@@ -1,0 +1,5 @@
+@function getRem($arg: 10) {
+  $rem: 0.1;
+
+  @return #{$arg * $rem}rem;
+}
